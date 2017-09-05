@@ -1,10 +1,20 @@
 """
 Date converter 
 """
-months = ['January', 'February', '"Marzo', 'Abril', 'May', 'June', 'July', 'Agosto', 'September', 'October', 'November', 'December']
+months = ['January', 'February', '"March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 print('This program converts dates.')
 date = input('Please enter a date in the form mm/dd/yyyy: ')
 
-converted = str(months[dateList[:1]] + " " + dateList[3:4] + ", " + dateList[6:])
-print(converted)
+if (date[0] == '0'):
+    if (date[3] == '0'):
+        converted = str(months[(int(date[1:2]))-1] + " " + date[4:5] + ", " + date[6:])
+    else:
+        converted = str(months[(int(date[1:2]))-1] + " " + date[3:5] + ", " + date[6:])
+else:
+    if (date[3] == '0'):
+        converted = str(months[int(date[1])-3] + " " + date[4:5] + ", " + date[6:]) 
+    else:
+        converted = str(months[int(date[1])-3] + " " + date[3:5] + ", " + date[6:])
+
+print('The converted date is ' + converted + '.')
