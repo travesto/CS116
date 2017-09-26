@@ -1,6 +1,3 @@
-"""
-tic tac toe
-"""
 def listprinter(tictactoe):
    if type(tictactoe).__name__ != 'list':
        print('You should be using a list!')
@@ -11,16 +8,16 @@ def listprinter(tictactoe):
            return False
        for character in element:
            print(character,end=" ")
-       print() 
+print()  
        
-blerg = []
+print('This program formats tic-tac-toe boards.')
+tic = input('Enter the board: ')
+tac = []
+tac = list(tic)
+toe = []
 
-print("This program formats tic-tac-toe boards.")
-board = input("Enter the board: ")
-blerg.append([board[:3]])
-blerg.append([board[3:6]])
-blerg.append([board[6:9]])
-        
-print(blerg)
-listprinter(blerg)
+toe.append(tac[0:3])
+toe.append(tac[3:6])
+toe.append(tac[6:])
 
+listprinter(toe)
